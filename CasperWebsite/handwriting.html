@@ -1,7 +1,15 @@
 <html>
 
 <head>
+    <!--Title of page-->
     <title>MNIST</title>
+
+    <!--Webpage icon-->
+    <link rel="icon" href="Images/Icon.jpg"/>
+
+    <!--Relates CSS stylesheet file to page-->
+    <link rel="stylesheet" href="Themes/Stylesheet.css"/>
+
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
     <script type="text/javascript">
         // Variables for referencing the canvas and 2dcanvas context
@@ -207,67 +215,15 @@
         }
     </script>
 
-    <style>
-        /* Some CSS styling */
-
-        #mnistapp {
-            /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        .rightside {
-            float: left;
-            width: 500px;
-            height: 125px;
-            background-color: #def;
-            padding: 10px;
-            border-radius: 4px;
-        }
-
-        .leftside {
-            float: left;
-            width: 150px;
-            height: 200px;
-            margin-left: 10px;
-        }
-
-        #sketchpad {
-            float: left;
-            height: 140px;
-            width: 140px;
-            border: 2px solid #888;
-            border-radius: 4px;
-            position: relative;
-            background-color: black;
-            /* Necessary for correct mouse co-ords in Firefox */
-        }
-
-        #clearbutton {
-            font-size: 15px;
-            padding: 10px;
-            -webkit-appearance: none;
-            background: #eee;
-            border: 1px solid #888;
-        }
-
-        #predictbutton {
-            font-size: 15px;
-            padding: 10px;
-            -webkit-appearance: none;
-            background: #eee;
-            border: 1px solid #888;
-        }
-    </style>
 </head>
 
 <body onload="init()">
+    <div>
+        <h1>Hand-drawn number guesser</h1>
+    </div>
+
     <div id="mnistapp">
-        <h4 style="margin-left: 10px;">Draw a number in the left-hand box</h4>
+        <h4>Draw a number (0-9) in the below box</h4>
         <div class="leftside">
             <canvas id="sketchpad" height="140" width="140"></canvas>
             <input type="submit" value="Predict" id="predictbutton" onclick="predict();">
@@ -275,6 +231,10 @@
         </div>
         <div id="rightside" class="rightside">
         </div>
+    </div>
+
+    <div style="clear: both">
+        <a href="index.html">Back to home page</a>
     </div>
 </body>
 
